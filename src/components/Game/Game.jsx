@@ -5,11 +5,11 @@ import { WORDS, PALABRAS } from '../../data'
 import { NUM_OF_GUESSES_ALLOWED } from '../../constants'
 import { checkGuess } from "../../game-helpers";
 //
-import GuessInput from "../GuessInput/GuessInput";
+import GuessInput from "../GuessInput";
 //
-import GuessResults from "../GuessResults.jsx/GuessResults";
-import Banner from "../Banner/Banner"
-import Keyboard from "../keyboard/Keyboard";
+import GuessResults from "../GuessResults";
+import Banner from "../Banner"
+import Keyboard from "../Keyboard";
 
 
 const Game = function () {
