@@ -1,0 +1,183 @@
+/*variables*/
+html {
+  --color-success: #17824d;
+  --color-warning: hsl(50deg 100% 30%);
+  --color-error: #c32222;
+  --color-gray-100: hsl(0deg 0% 10%);
+  --color-gray-300: hsl(0deg 0% 25%);
+  --color-gray-500: hsl(0deg 0% 50%);
+  --color-gray-700: hsl(0deg 0% 75%);
+  --color-gray-900: hsl(0deg 0% 90%);
+}
+
+body {
+  font-family: sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  width: 100vw;
+  border-bottom: 1px solid var(--color-gray-900);
+}
+
+header h1 {
+  text-align: center;
+  flex: 1;
+}
+
+.game-wrapper {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+  height: 100%;
+  gap: 30px;
+}
+
+.guess-results {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 6px;
+}
+
+.guess {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.cell {
+  width: 15%;
+  font-weight: 600;
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1 / 1;
+  border: 2px solid var(--color-gray-700);
+  border-radius: 10%;
+  font-size: 30px;
+}
+
+.guess-input-wrapper {
+  display: flex;
+  max-width: 500px;
+  justify-content: center;
+}
+
+.guess-input-wrapper input {
+  font-weight: bold;
+  text-transform: uppercase;
+  max-width: 58%;
+  padding: 5px 10px;
+  font-size: 25px;
+  border: 2px solid var(--color-gray-700);
+  border-radius: 05px;
+}
+
+.input-disable {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.correct {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: white;
+}
+
+.incorrect {
+  background: var(--color-gray-300);
+  border-color: var(--color-gray-300);
+  color: white;
+}
+
+.misplaced {
+  background: var(--color-warning);
+  border-color: var(--color-warning);
+  color: white;
+}
+
+.keyboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 200px;
+  gap: 6px;
+}
+
+.keyboard-row {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6px;
+}
+
+.keyboard-button {
+  width: 40px;
+  font-weight: bold;
+  border-radius: 10%;
+  border: 2px solid var(--color-gray-700);
+}
+
+.banner {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  -webkit-box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.47);
+  box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.47);
+}
+
+.banner button{
+  margin-left: 20px;
+  padding: 0px 10px;
+  border: 2px solid var(--color-gray-700);
+  background-color: var(--color-gray-900);
+  border-radius: 5px;
+}
+
+.sad {
+  background: rgba(195, 34, 34, 1);
+  background: -moz-linear-gradient(-45deg, rgba(195, 34, 34, 1) 0%, rgba(195, 34, 34, 1) 22%, rgba(59, 0, 0, 1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(195, 34, 34, 1)), color-stop(22%, rgba(195, 34, 34, 1)), color-stop(100%, rgba(59, 0, 0, 1)));
+  background: -webkit-linear-gradient(-45deg, rgba(195, 34, 34, 1) 0%, rgba(195, 34, 34, 1) 22%, rgba(59, 0, 0, 1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(195, 34, 34, 1) 0%, rgba(195, 34, 34, 1) 22%, rgba(59, 0, 0, 1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(195, 34, 34, 1) 0%, rgba(195, 34, 34, 1) 22%, rgba(59, 0, 0, 1) 100%);
+  background: linear-gradient(135deg, rgba(195, 34, 34, 1) 0%, rgba(195, 34, 34, 1) 22%, rgba(59, 0, 0, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c32222', endColorstr='#3b0000', GradientType=1);
+  color: white;
+}
+
+.happy {
+  background: rgba(23, 130, 77, 1);
+  background: -moz-linear-gradient(-45deg, rgba(23, 130, 77, 1) 0%, rgba(23, 130, 77, 1) 22%, rgba(0, 59, 29, 1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(23, 130, 77, 1)), color-stop(22%, rgba(23, 130, 77, 1)), color-stop(100%, rgba(0, 59, 29, 1)));
+  background: -webkit-linear-gradient(-45deg, rgba(23, 130, 77, 1) 0%, rgba(23, 130, 77, 1) 22%, rgba(0, 59, 29, 1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(23, 130, 77, 1) 0%, rgba(23, 130, 77, 1) 22%, rgba(0, 59, 29, 1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(23, 130, 77, 1) 0%, rgba(23, 130, 77, 1) 22%, rgba(0, 59, 29, 1) 100%);
+  background: linear-gradient(135deg, rgba(23, 130, 77, 1) 0%, rgba(23, 130, 77, 1) 22%, rgba(0, 59, 29, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#17824d', endColorstr='#003b1d', GradientType=1);
+  color: white;
+}
