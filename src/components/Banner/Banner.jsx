@@ -12,13 +12,17 @@ const Banner = function ({handleResetGame, numGuesses, gameStatus, answer}) {
             {                
                 gameStatus ==='won' ? 
                 <p>
-                    <strong>Congratulations!</strong> Got it in
-                    <strong> {numGuesses === 1 ? `1 guess` : `${numGuesses} guesses`}</strong>.
+                    <span>
+                        <strong>Congratulations!</strong> Got it in
+                        <strong> {numGuesses === 1 ? `1 guess` : `${numGuesses} guesses`}</strong>.
+                    </span>                    
                     <button onClick={handleResetGame}>Reset</button>
                 </p> : (gameStatus === 'lost'
-                    ?<p>Lo siento, la respuesta correcta es <strong>{answer}</strong>.
-                    <button onClick={handleResetGame}>Empezar de nuevo!</button>
-                </p>
+                    ?<p>                      <span>
+                            Lo siento, la respuesta correcta es <strong>{answer}</strong>.
+                        </span>                        
+                        <button onClick={handleResetGame}>Empezar de nuevo!</button>
+                    </p>
                     : undefined)                
             }            
         </div >

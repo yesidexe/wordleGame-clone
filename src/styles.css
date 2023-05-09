@@ -30,6 +30,7 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 60px;
+  margin-bottom: 80px;
   width: 100vw;
   border-bottom: 1px solid var(--color-gray-900);
 }
@@ -41,7 +42,6 @@ header h1 {
 
 .game-wrapper {
   align-items: center;
-  justify-content: center;
   display: flex;
   flex-direction: column;
   min-width: 500px;
@@ -52,7 +52,7 @@ header h1 {
 .guess-results {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  min-width: 400px;
   gap: 6px;
 }
 
@@ -117,22 +117,21 @@ header h1 {
   flex-direction: column;
   align-items: center;
   width: 500px;
-  height: 200px;
   gap: 6px;
 }
 
 .keyboard-row {
   display: flex;
   width: 100%;
-  height: 40px;
   flex-direction: row;
   justify-content: center;
   gap: 6px;
 }
 
 .keyboard-button {
-  width: 40px;
   font-weight: bold;
+  width: 9%;
+  padding: 0.5% 2%;
   border-radius: 10%;
   border: 2px solid var(--color-gray-700);
 }
@@ -150,8 +149,14 @@ header h1 {
   box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.47);
 }
 
+.banner p{
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
 .banner button{
-  margin-left: 20px;
+  width: 60%;
   padding: 0px 10px;
   border: 2px solid var(--color-gray-700);
   background-color: var(--color-gray-900);
@@ -180,4 +185,76 @@ header h1 {
   background: linear-gradient(135deg, rgba(23, 130, 77, 1) 0%, rgba(23, 130, 77, 1) 22%, rgba(0, 59, 29, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#17824d', endColorstr='#003b1d', GradientType=1);
   color: white;
+}
+
+@media (max-width: 530px) {
+  header{
+    margin-bottom: 50px;
+  } 
+
+  .game-wrapper{
+    min-width: 250px;
+    gap: 15px;
+  }
+
+  .guess-results {
+    min-width: 350px;
+  }
+
+  .cell {
+    font-size: 28px;
+  }
+
+  .guess-input-wrapper {
+    max-width: 350px;
+  }
+
+  .keyboard-wrapper {
+    width: 350px;
+    gap: 6px;
+  }
+
+  .keyboard-row {
+    width: 100%;
+    /*height: 40px;*/
+  }  
+
+  .banner{
+    font-size: 1rem;
+    height: 70px;
+  }
+  
+}
+
+@media (max-width: 360px) {
+  header{
+    margin-bottom: 40px;
+  }
+
+  .game-wrapper{
+    min-width: 200px;
+    gap: 15px;
+  }
+
+  .guess-results {
+    min-width: 300px;
+  }
+
+  .cell {
+    font-size: 25px;
+  }
+
+  .guess-input-wrapper {
+    max-width: 300px;
+  }
+
+  .keyboard-wrapper {
+    width: 300px;
+  }
+
+  .keyboard-row {
+    width: 100%;
+    gap: 3px;
+  }  
+  
 }
